@@ -1,7 +1,10 @@
 const express = require('express');
 const services = require('./service.json')
+const cors = require('cors')
 const app = express();
 const port = process.env.PORT || 5000;
+
+app.use(cors())
 
 app.get('/', (req, res) => {
     res.send('users management server is running and restart')
