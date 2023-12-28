@@ -1,0 +1,52 @@
+[
+    {
+      "id": 1,
+      "title": "Tech Expo 2023",
+      "description": "Join us for the biggest tech expo of the year. Explore the latest innovations and connect with industry leaders.",
+      "img": "https://images.unsplash.com/photo-1592478411213-6153e4ebc07d?q=80&w=2012&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "price": 99.99
+    },
+    {
+      "id": 2,
+      "title": "CodeCamp Summit",
+      "description": "Enhance your coding skills at CodeCamp Summit. Hands-on workshops and expert sessions await you.",
+      "img": "https://images.unsplash.com/photo-1531498860502-7c67cf02f657?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "price": 79.99
+    },
+    {
+      "id": 3,
+      "title": "AI Symposium",
+      "description": "Delve into the world of artificial intelligence. Explore cutting-edge AI technologies and their applications.",
+      "img": "https://images.unsplash.com/photo-1684369585053-2b35888b3ae8?q=80&w=1928&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "price": 119.99
+    },
+    {
+        "id": 4,
+        "title": "IT Support & Training",
+        "description": "Delve into the world of artificial intelligence. Explore cutting-edge AI technologies and their applications.",
+        "img": "https://plus.unsplash.com/premium_photo-1663054378169-8ffea2e11c42?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "price": 119.99
+      },
+      {
+        "id": 5,
+        "title": "Gaming Competition",
+        "description": "Delve into the world of artificial intelligence. Explore cutting-edge AI technologies and their applications.",
+        "img": "https://images.unsplash.com/photo-1534423861386-85a16f5d13fd?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "price": 119.99
+      },
+      {
+        "id": 6,
+        "title": "IT service Advertisement",
+        "description": "Delve into the world of artificial intelligence. Explore cutting-edge AI technologies and their applications.",
+        "img": "https://plus.unsplash.com/premium_photo-1683134444181-c3c5714dd876?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "price": 119.99
+      },
+      {
+        "id": 7,
+        "title": "Hackathon Organize",
+        "description": "Delve into the world of artificial intelligence. Explore cutting-edge AI technologies and their applications.",
+        "img": "https://images.unsplash.com/photo-1551434678-e076c223a692?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "price": 119.99
+      }
+  ]
+  
