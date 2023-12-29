@@ -7,6 +7,9 @@ import {
 import './index.css'
 import Main from './assets/components/Main.jsx';
 import Services from './assets/components/Services.jsx';
+import Service from './assets/components/Service.jsx';
+import Users from './assets/components/Users.jsx';
+import User from './assets/components/User.jsx';
 
 
 const router = createBrowserRouter([
@@ -15,10 +18,25 @@ const router = createBrowserRouter([
     element: <Main />,
     children: [
       {
+        path: "/users",
+        element: <Users />,
+        loader: () => fetch('http://localhost:5000/users')
+      },
+      {
+        path: "/users/:id",
+        element: <User />,
+        loader: ({params}) => fetch(`http://localhost:5000/users/${params.id}`)
+      },
+      {
         path: "/services",
         element: <Services />,
         loader: () => fetch('http://localhost:5000/services/')
       },
+      {
+        path: '/services/:id',
+        element: <Service></Service>,
+        loader: ({params}) => fetch(`http://localhost:5000/services/${params.id}`),
+      }
     ],
   },
 ]);

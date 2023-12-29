@@ -4,6 +4,7 @@ const Header = () => {
     return (
         <div>
             <Link to='/services'>Services</Link>
+            <Link to='/users'>Users</Link>
         </div>
     );
 };
