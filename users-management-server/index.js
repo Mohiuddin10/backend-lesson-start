@@ -20,6 +20,11 @@ app.get('/users', (req, res) => {
     res.send(users)
 })
 
+app.post('/users', (req, res) => {
+    console.log('post api hiting');
+    console.log(req.body);
+})
+
 app.get('/users/:id', (req, res) => {
     const id = parseInt(req.params.id);
     const user = users.find(user => user.id === id);
