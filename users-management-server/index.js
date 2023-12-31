@@ -11,13 +11,14 @@ const users = [
 ]
 
 const userNumbers = [
-    {id: 1, name: 'Mohiuddin', phone: 01711261435},
-    {id: 2, name: 'Roxy', phone: 01711261436},
-    {id: 3, name: 'Bappy', phone: 01711261475}
+    {id: 1, name: 'Mohiuddin', phone: 1711261435},
+    {id: 2, name: 'Roxy', phone: 1711261436},
+    {id: 3, name: 'Bappy', phone: 1711261475}
 ]
 
 app.use(cors());
 app.use(express.json());
+
 
 app.get('/', (req, res) => {
     res.send('users management server is running and restart')
@@ -47,6 +48,15 @@ app.get('/user', (req, res) => {
 
 app.get('/user-numbers', (req, res) => {
     res.send(userNumbers);
+})
+
+app.post('/user-numbers', (req, res) => {
+    const newNumber = req.body;
+    console.log(newNumber);
+    newNumber.id = userNumbers.length + 1;
+    userNumbers.push(newNumber);
+    console.log(newNumber);
+    console.log('port hitting');
 })
 
 app.get('/user-numbers/:id', (req, res) => {
