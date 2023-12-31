@@ -10,7 +10,14 @@ const users = [
     {id: 3, name: 'Bappy', email: 'bappy@gmail.com'}
 ]
 
-app.use(cors())
+const userNumbers = [
+    {id: 1, name: 'Mohiuddin', phone: 01711261435},
+    {id: 2, name: 'Roxy', phone: 01711261436},
+    {id: 3, name: 'Bappy', phone: 01711261475}
+]
+
+app.use(cors());
+app.use(express.json());
 
 app.get('/', (req, res) => {
     res.send('users management server is running and restart')
@@ -22,7 +29,10 @@ app.get('/users', (req, res) => {
 
 app.post('/users', (req, res) => {
     console.log('post api hiting');
-    console.log(req.body);
+    const newUser = req.body;
+    newUser.id = users.length + 1;
+    users.push(newUser);
+    console.log(newUser);
 })
 
 app.get('/users/:id', (req, res) => {
@@ -34,6 +44,16 @@ app.get('/users/:id', (req, res) => {
 app.get('/user', (req, res) => {
     res.send('user is loading')
 });
+
+app.get('/user-numbers', (req, res) => {
+    res.send(userNumbers);
+})
+
+app.get('/user-numbers/:id', (req, res) => {
+    const id = parseInt(req.params.id);
+    const userNumber = userNumbers.find(singleUser => singleUser.id === id);
+    res.send(userNumber);
+})
 
 app.get('/services', (req, res) => {
     res.send(services)

@@ -10,6 +10,8 @@ import Services from './assets/components/Services.jsx';
 import Service from './assets/components/Service.jsx';
 import Users from './assets/components/Users.jsx';
 import User from './assets/components/User.jsx';
+import UsersNumber from './assets/components/UsersNumber.jsx';
+import SingleUserNumber from './assets/components/SingleUserNumber.jsx';
 
 
 const router = createBrowserRouter([
@@ -26,6 +28,15 @@ const router = createBrowserRouter([
         path: "/users/:id",
         element: <User />,
         loader: ({params}) => fetch(`http://localhost:5000/users/${params.id}`)
+      },
+      {
+        path: '/usersNumber',
+        element: <UsersNumber></UsersNumber>
+      },
+      {
+        path: '/usersNumber/:id',
+        element: <SingleUserNumber></SingleUserNumber>,
+        loader: ({params}) => fetch(`http://localhost:5000/user-numbers/${params.id}`)
       },
       {
         path: "/services",

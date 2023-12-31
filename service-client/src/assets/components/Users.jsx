@@ -1,8 +1,13 @@
+import { useEffect, useState } from "react";
 import { Link, useLoaderData } from "react-router-dom";
 
 const Users = () => {
-    const users = useLoaderData();
-    console.log(users);
+    const [users, setUsers] = useState([]);
+    useEffect(() => {
+        fetch('http://localhost:5000/users')
+        .then(res => res.json())
+        .then(data => setUsers(data))
+    },[users])
 
     const handleAddUser = event => {
         event.preventDefault();
@@ -21,6 +26,9 @@ const Users = () => {
         .then(res => res.json())
         .then(data => {
             console.log('inside post response', data);
+            const newUsers = [...users, data];
+            setUsers(newUsers);
+            form.reset();
         })
     }
 
